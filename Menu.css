@@ -1,0 +1,24 @@
+header {
+    height: 60px;
+    background-color: #000000;
+    text-align: center;
+
+}
+.menu ul li{
+    display:inline-block;
+    line-height: 60px;
+    margin: 0 10px;
+}
+a{
+    text-decoration: none;
+    color: #ff0000;
+    font-size: 40px;
+    background-color: #000000;
+    padding: 5px;
+    margin: 80px;
+}
+h3{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
