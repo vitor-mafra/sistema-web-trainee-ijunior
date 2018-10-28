@@ -17,9 +17,9 @@ $discos = $banco_disco->listarDiscos();
         <header>
             <nav class="menu">
                 <ul>
-                    <li><a href = "index.html">Página Inicial</a></li>
-                    <li><a href = "Lojas.html">Lojas</a></li>
-                    <li><a href = "Discos.html">Discos</a></li>
+                    <li><a href = "index.php">Página Inicial</a></li>
+                    <li><a href = "listarLojas.php">Lojas</a></li>
+                    <li><a href = "listarDiscos.php">Discos</a></li>
                 </ul>
             </nav>
         </header>
@@ -33,6 +33,7 @@ $discos = $banco_disco->listarDiscos();
 				<th> Gênero </th>
 				<th>  <th>
 				<th>  <th>
+				<th>  <th>
 			</tr>
 			</thead>
 			<tbody>
@@ -44,6 +45,7 @@ $discos = $banco_disco->listarDiscos();
 					<td><?php echo $disco->getArtista() ?></td>
 					<td><?php echo $disco->getAnoLancado() ?></td>
 					<td><?php echo $disco->getGenero() ?></td>
+					<td><a href="DiscoHelper.php?acao=verlojas&id=<?php echo '$disco->getIdDisco()';?>" class="tablebutton">Ver lojas</a></td>
 					<td><a href="DiscoHelper.php?acao=alterar&id=<?php echo '$disco->getIdDisco()';?>" class="tablebutton">Editar</a></td>
 					<td><a href="DiscoHelper.php?acao=excluir&id=<?php echo '$disco->getIdDisco()';?>" class="tablebutton">Excluir</a></td>
 				</tr>

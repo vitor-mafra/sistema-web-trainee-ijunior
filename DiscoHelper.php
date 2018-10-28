@@ -1,5 +1,5 @@
 <?php
-	require_once 'discofuncoes.php';
+	require_once 'Disco.php';
 	require_once 'DiscoDAO.php';		
 	$acao = $_GET["acao"];
 
