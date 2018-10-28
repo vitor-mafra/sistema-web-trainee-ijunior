@@ -28,6 +28,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Lojas
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
+                                <li><a href = "Mostrar_Lojas.html">Exibir Lojas</a></li>
                                 <li><a href = "Cadastro_Lojas.html">Cadastrar Lojas</a></li>
                                 <li><a href = "Editar_Lojas.html">Editar Lojas</a></li>
                                 <li><a href = "Excluir_Lojas.html">Excluir Lojas</a></li>
@@ -37,6 +38,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Discos
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
+                                <li><a href = "Mostrar_Discos.html">Exibir Discos</a></li>
                                 <li><a href = "Cadastro_Discos.html">Cadastrar Discos</a></li>
                                 <li><a href = "Editar_Discos.html">Editar Discos</a></li>
                                 <li><a href = "Exluir_Discos.html">Excluir Discos</a></li>
@@ -46,7 +48,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mais
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="livros.html">Livros</a></li>
+                                <li><a href="Mais.html">Mais</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -56,17 +58,17 @@
             <div> 
                 <nav class = "Tabela"> <!-- Nesta parte devemos implementar o PHP para que a tabela apareça com as lojas cadastradas no banco de dados, 
                         e para que os botôes façam suas respectivas ações no BD-->
-                    <table>
-                        <tr>Lojas</tr>
-                            <th>Endereço...</th>
-                                <td>
-                                    rua da imaginacao
-                                    <!-- PHP para inserir os dados da loja "x" na célula, sendo a cada celula, um trem php para inserir o respectivo dado na row da table-->
-                                </td> 
-                            <th>Nome da loja</th>
-                                <td>
-                                    Loja tal
-                                </td>
+                    <table border = 1>
+                        <tr>
+                            <th>Endereço</th>
+                            <th>Telefone</th>
+                            <th>Responsável</th>
+                        </tr>
+                        <tr>
+                            <td> Rua da Imaginação <!--aqui viria o PHP para inserir os dados automaticamente nas respectivas rows da tabela --> <!-- acho que eu teria de criar algo para automaticamente inserir o respectido td --></td>
+                            <td>(0xx)xxxx-xxxx</td>
+                            <td>Fulano</td>
+                        </tr>
                     </table>
                 </nav>
             </div>
