@@ -40,12 +40,11 @@
 			try{
 				$d = $this->conectar();
 					
-				$query = "DELETE t1, t2 FROM 
-       					Disco as t1 
-   					INNER JOIN  loja_disco as t2 on t1.IdDisco = t2.IdDisco
-   					WHERE  t1.IdDisco = ".$_POST["id"]."";
+				$query = "DELETE FROM Disco
+   					WHERE  IdDisco = {$id}";
 				$d->query($query);
 				$d->close();
+
 				
 			}catch(Exception $ex){
 				$situacao = FALSE;
@@ -53,6 +52,7 @@
 			}
 			return $situacao;
 		}
+		
 
 
 		public function alterar($id){
@@ -114,6 +114,28 @@
 			}
 			return $discos;
 		}
+
+
+		function buscarPorId($codigo){
+			$disco = new Disco();
+			try{
+				$d = $this->conectar();
+				$query = "select * from Disco where IdDisco = {$codigo}";
+				$resultado = $d->query($query);
+				$d->close();
+				$registro = mysqli_fetch_assoc($resultado);
+				$disco->setIdDisco($registro['IdDisco']);
+				$disco->setNomeDisco($registro['Nome']);
+				$disco->setArtista($registro['Artista']);
+				$disco->setAnoLancado($registro['AnoLancado']);
+				$disco->setGenero($registro['Genero']);
+			}catch(Exception $ex){
+				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
+			}
+
+			return $disco;
+		}
+
 
 	}
 ?>

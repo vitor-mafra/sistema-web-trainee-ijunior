@@ -14,11 +14,11 @@
 			$disco->setGenero($_POST["genero"]);
 		
 			if($banco_disco->novo($disco)){
-				echo "<script> alert (\"Disco salvo com sucesso!\"); </script>"
+				echo "<script> alert (\"Disco salvo com sucesso!\"); </script>";
 			} else {
-				echo "<script> alert(\"Erro ao salvar disco!\"); </script>"
+				echo "<script> alert(\"Erro ao salvar disco!\"); </script>";
 			}
-			echo "<script>location.href='listarDiscos.php'; </script>"			
+			echo "<script>location.href='listarDiscos.php'; </script>";			
 
 
 		break;
@@ -27,12 +27,12 @@
 			$banco_disco = new DiscoDAO();		
 			$id = $_GET["id"];
 
-			if($banco_disco->excluir($disco)){
-				echo" <script> alert (\"Disco excluído com sucesso!\"); </script>"
+			if($banco_disco->excluir($id)){
+				echo" <script> alert (\"Disco excluído com sucesso!\"); </script>";
 			} else {
-				echo "<script> alert(\"Erro ao excluir disco!\"); </script>"
+				echo "<script> alert(\"Erro ao excluir disco!\"); </script>";
 			}
-			echo "<script>location.href='listarDiscos.php'; </script>"			
+			echo "<script>location.href='listarDiscos.php'; </script>";			
 		
 		break;
 
@@ -41,23 +41,23 @@
 			$id = $_GET["id"];
 
 			if($banco_disco->alterar($id)){
-				echo" <script> alert (\"Disco alterado com sucesso!\"); </script>"
+				echo" <script> alert (\"Disco alterado com sucesso!\"); </script>";
 			} else {
-				echo "<script> alert(\"Erro ao alterar disco!\"); </script>"
+				echo "<script> alert(\"Erro ao alterar disco!\"); </script>";
 			}
-			echo "<script>location.href='listarDiscos.php'; </script>"		
+			echo "<script>location.href='listarDiscos.php'; </script>";		
 
 		break;
 	
 
-		case 'consultarLojas':
+/*		case 'consultarLojas':
 			$banco_disco = new DiscoDAO();		
 			$id = $_GET["id"];
 
-			$banco_disco->($id)
+			$banco_disco->($id);
 	
 		break;
-	}
+*/	}
 
 
 

@@ -6,6 +6,10 @@
 		private $genero;
 		private $id;
 		
+		function getIdDisco(){
+			return $this->id;
+		}
+
 		function setIdDisco($id){
 			$this->id = $id;
 		}
