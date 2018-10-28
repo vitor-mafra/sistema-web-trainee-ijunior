@@ -14,9 +14,9 @@ Discos-->
         <header>
             <nav class="menu">
                 <ul>
-                    <li><a href = "Menu.html">Página Inicial</a></li>
-                    <li><a href = "Lojas.html">Lojas</a></li>
-                    <li><a href = "Discos.html">Discos</a></li>
+                    <li><a href = "index.php">Página Inicial</a></li>
+                    <li><a href = "listarLojas.php">Lojas</a></li>
+                    <li><a href = "listarDiscos.php">Discos</a></li>
                 </ul>
             </nav>
         </header>
