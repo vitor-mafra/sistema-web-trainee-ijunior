@@ -21,7 +21,7 @@ Discos-->
             </nav>
         </header>
         <div>
-            <h3><img src = "LOGO.jpg" alt = "Pearl Records.inc" height = 500px, width = 600px></h3>
+            <img src="LOGO.jpg" alt = "Pearl Records.inc" height = 500px width = 600px>
         </div>
         <footer>
             <h4>Pearl Records 2018</h4>
