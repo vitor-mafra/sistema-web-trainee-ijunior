@@ -9,9 +9,14 @@
 		private $cep;
 		private $cidade;
 
+		function getIdLoja(){
+			return $this->id;
+		}
+
 		function setIdLoja($id){
 			$this->id = $id;
 		}
+
 		function setDono($dono){
 			$this->dono = $dono;
 		}

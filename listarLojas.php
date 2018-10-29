@@ -23,6 +23,12 @@ $lojas = $banco_loja->listarLojas();
                 </ul>
             </nav>
         </header>
+
+	<div class="cadastro">
+		<a href="novaLoja.php" class="cadastrobutton">Cadastrar nova loja</a>
+        </div>
+
+
         <div class="tabeladiscos">
 		<table border=1>			
 			<thead>			
@@ -45,8 +51,8 @@ $lojas = $banco_loja->listarLojas();
 					
 					<td><?php echo $loja->getTelefone() ?></td>
 					<td><a href="LojaHelper.php?acao=detalhes&id=<?php echo '$loja->getIdLoja()';?>" class="tablebutton">Detalhes</a></td>
-					<td><a href="LojaHelper.php?acao=alterar&id=<?php echo '$disco->getIdLoja()';?>" class="tablebutton">Editar</a></td>
-					<td><a href="LojaHelper.php?acao=excluir&id=<?php echo '$disco->getIdLoja()';?>" class="tablebutton">Excluir</a></td>
+					<td><a href="alterarLoja.php?id=<?php echo $loja->getIdLoja();?>" class="tablebutton">Editar</a></td>
+					<td><a href="excluirLoja.php?id=<?php echo $loja->getIdLoja();?>" class="tablebutton">Excluir</a></td>
 				</tr>
 			<?php   }  ?>
 

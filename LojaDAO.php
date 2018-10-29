@@ -19,8 +19,7 @@
 				$d = $this->conectar();
 					
 				$query = "INSERT INTO Loja(Dono, Telefone, EnderecoRua, EnderecoNumero, EnderecoBairro, EnderecoCEP, EnderecoCidade)
-					 VALUES ('".$_POST["dono"]."','".$_POST["telefone"]."',	'".$_POST["rua"]."'
-					".$_POST["rua"]."'".$_POST["numero"]."'".$_POST["bairro"]."'".$_POST["cep"]."') ";
+					 VALUES ('".$_POST["dono"]."','".$_POST["telefone"]."',	'".$_POST["rua"]."', '".$_POST["numero"]."', '".$_POST["bairro"]."', '".$_POST["cep"]."', '".$_POST["cidade"]."') ";
 
 				$d->query($query);
 				$codigo = $d->insert_id;
@@ -40,10 +39,8 @@
 			try{
 				$d = $this->conectar();
 					
-				$query = "DELETE t1, t2 FROM 
-       					Loja as t1 
-   					INNER JOIN  loja_disco as t2 on t1.IdLoja = t2.IdLoja
-   					WHERE  t1.IdLoja = ".$_POST["id"]."";
+				$query = "DELETE FROM Loja 
+   					WHERE  IdLoja = {$id}";
 				$d->query($query);
 				$d->close();
 				
@@ -104,6 +101,30 @@
 				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
 			}
 			return $lojas;
+		}
+		
+
+		function buscarPorId($codigo){
+			$loja = new Loja();
+			try{
+				$d = $this->conectar();
+				$query = "select * from Loja where IdLoja = {$codigo}";
+				$resultado = $d->query($query);
+				$d->close();
+				$registro = mysqli_fetch_assoc($resultado);
+				$loja->setIdLoja($registro['IdLoja']);
+				$loja->setDono($registro['Dono']);
+				$loja->setTelefone($registro['Telefone']);
+				$loja->setRua($registro['EnderecoRua']);
+				$loja->setNumero($registro['EnderecoNumero']);
+				$loja->setBairro($registro['EnderecoBairro']);
+				$loja->setCEP($registro['EnderecoCEP']);
+				$loja->setCidade($registro['EnderecoCidade']);
+			}catch(Exception $ex){
+				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
+			}
+
+			return $loja;
 		}
 
 

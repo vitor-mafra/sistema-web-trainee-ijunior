@@ -10,32 +10,32 @@
 			
 			$loja->setDono($_POST["dono"]);
 			$loja->setTelefone($_POST["telefone"]);
-			$loja->setEnderecoRua($_POST["rua"]);
-			$loja->setEnderecoNumero($_POST["numero"]);
-			$loja->setEnderecoBairro($_POST["bairro"]);
-			$loja->setEnderecoCEP($_POST["cep"]);
-			$loja->setEnderecoCidade($_POST["cidade"]);
+			$loja->setRua($_POST["rua"]);
+			$loja->setNumero($_POST["numero"]);
+			$loja->setBairro($_POST["bairro"]);
+			$loja->setCEP($_POST["cep"]);
+			$loja->setCidade($_POST["cidade"]);
 
 			if($banco_loja->novo($loja)){
-				echo "<script> alert (\"Loja salvo com sucesso!\"); </script>"
+				echo "<script> alert (\"Loja salva com sucesso!\"); </script>";
 			} else {
-				echo "<script> alert(\"Erro ao salvar loja!\"); </script>"
+				echo "<script> alert(\"Erro ao salvar loja!\"); </script>";
 			}
-			echo "<script>location.href='listarLojas.php'; </script>"			
+			echo "<script>location.href='listarLojas.php'; </script>";		
 
 
 		break;
 
 		case 'excluir':
 			$banco_loja = new LojaDAO();		
-			$id = $_POST["id"];
+			$id = $_GET["id"];
 
-			if($banco_loja->excluir($loja)){
-				echo" <script> alert (\"Loja excluído com sucesso!\"); </script>"
+			if($banco_loja->excluir($id)){
+				echo" <script> alert (\"Loja excluída com sucesso!\"); </script>";
 			} else {
-				echo "<script> alert(\"Erro ao excluir loja!\"); </script>"
+				echo "<script> alert(\"Erro ao excluir loja!\"); </script>";
 			}
-			echo "<script>location.href='listarLojas.php'; </script>"			
+			echo "<script>location.href='listarLojas.php'; </script>";	
 		
 
 		break;
@@ -45,12 +45,12 @@
 			$banco_loja = new LojaDAO();		
 			$id = $_GET["id"];
 
-			if($banco_disco->alterar($id)){
-				echo" <script> alert (\"Loja alterada com sucesso!\"); </script>"
+			if($banco_loja->alterar($id)){
+				echo" <script> alert (\"Loja alterada com sucesso!\"); </script>";
 			} else {
-				echo "<script> alert(\"Erro ao alterar loja!\"); </script>"
+				echo "<script> alert(\"Erro ao alterar loja!\"); </script>";
 			}
-			echo "<script>location.href='listarLojas.php'; </script>"		
+			echo "<script>location.href='listarLojas.php'; </script>";
 
 		break;
 
