@@ -52,7 +52,7 @@ $lojas = $banco_loja->listarLojas();
 					<td><?php echo $loja->getRua(), ", ", $loja->getNumero(), ", ", $loja->getBairro(), ", ", $loja->getCEP(), ", ", $loja->getCidade() ?></td>
 					
 					<td><?php echo $loja->getTelefone() ?></td>
-					<td><a href="LojaHelper.php?acao=detalhes&id=<?php echo '$loja->getIdLoja()';?>" class="tablebutton">Detalhes</a></td>
+					<td><a href="verDiscos.php?id=<?php echo $loja->getIdLoja();?>" class="tablebutton">Detalhes</a></td>
 					<td><a href="alterarLoja.php?id=<?php echo $loja->getIdLoja();?>" class="tablebutton">Editar</a></td>
 					<td><a href="excluirLoja.php?id=<?php echo $loja->getIdLoja();?>" class="tablebutton">Excluir</a></td>
 				</tr>

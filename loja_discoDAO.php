@@ -29,41 +29,13 @@
 			return $situacao;
 		}
 
-		public function listarDiscosDaLoja(){
-			$situacao = TRUE;
-			$discos = array();
-			try{
-				$d = $this->conectar();
-				$query = "SELECT ";
-				$resultado = $d->query($query);
-				$d->close();
-			
-				while($registro = mysqli_fetch_assoc($resultado)){
-					$disco = new Disco();
-					$disco->setIdDisco($registro['IdDisco']);
-					$disco->setNomeDisco($registro['Nome']);
-					$disco->setArtista($registro['Artista']);
-					$disco->setAnoLancado($registro['AnoLancado']);
-					$disco->setGenero($registro['Genero']);
-					array_push($discos, $disco);				
-				}
-				$resultado->close();			
-			}catch(Exception $ex){
-				$situacao = FALSE;
-				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
-			}
-			return $discos;
-		}
-
-
 		public function consultarLojasDoDisco($id){
 			$situacao = TRUE;
 			$lojas_disco = array();
 			try{
 				$d = $this->conectar();
 				$query = "SELECT * FROM Loja_Disco
-					WHERE IdDisco = {$id}
-					AND QtdDisco > 0";
+					WHERE IdDisco = {$id}"; //and qtd>0??
 				$resultado = $d->query($query);
 				$d->close();
 
@@ -82,6 +54,33 @@
 			}
 			return $lojas_disco;
 		}
+
+		public function consultarDiscosDaLoja($id){
+			$situacao = TRUE;
+			$loja_discos = array();
+			try{
+				$d = $this->conectar();
+				$query = "SELECT * FROM Loja_Disco
+					WHERE IdLoja = {$id}";
+				$resultado = $d->query($query);
+				$d->close();
+			
+				while($registro = mysqli_fetch_assoc($resultado)){
+					$loja_disco = new Loja_Disco();
+					$loja_disco->setIdLoja($registro['IdLoja']);
+					$loja_disco->setIdDisco($registro['IdDisco']);
+					$loja_disco->setQtd($registro['QtdDisco']);
+					array_push($loja_discos, $loja_disco);				
+				}
+				$resultado->close();	
+	
+			}catch(Exception $ex){
+				$situacao = FALSE;
+				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
+			}
+			return $loja_discos;
+		}
+
 		
 		public function buscarPorId($idDisco, $idLoja){
 			$loja_disco = new Loja_Disco();

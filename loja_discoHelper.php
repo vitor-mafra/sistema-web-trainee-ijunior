@@ -1,6 +1,7 @@
 <?php
 	require_once 'loja_disco.php';
 	require_once 'loja_discoDAO.php';		
+
 	$acao = $_GET["acao"];
 
 	switch($acao){
@@ -10,11 +11,11 @@
 			$idDisco = $_GET["idD"];
 			$idLoja = $_GET["idL"];
 			if($banco_loja_disco->alterar($idDisco, $idLoja)){
-				echo" <script> alert (\"Quantidade alterado com sucesso!\"); </script>";
+				echo" <script> alert (\"Quantidade alterada com sucesso!\"); </script>";
 			} else {
 				echo "<script> alert(\"Erro ao alterar quantidade!\"); </script>";
 			}
-			echo "<script>location.href='verLojas.php'; </script>";		
+			echo "<script>location.href='listarDiscos.php'</script>";	//alterar link para verLojas.php com o id do disco	
 
 		break;
 	
@@ -26,6 +27,17 @@
 			$banco_disco->consultarLojasDoDisco($id);
 	
 		break;
+
+		case 'detalhes':
+			$banco_loja = new LojaDAO();		
+			$id = $_GET["id"];
+
+			$banco_loja->consultarDiscosDaLoja($id);
+
+
+		break;
+
+
 	}
 
 

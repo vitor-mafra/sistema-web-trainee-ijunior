@@ -49,14 +49,6 @@
 
 		break;
 	
-
-		case 'consultarLojas':
-			$banco_disco = new DiscoDAO();		
-			$id = $_GET["id"];
-
-			$banco_disco->consultarLojas($id);
-	
-		break;
 	}
 
 

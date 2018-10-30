@@ -3,7 +3,6 @@ require_once 'loja_disco.php';
 require_once 'loja_discoDAO.php';
 
 $banco_loja_disco = new Loja_DiscoDAO();
-
 $loja_disco = $banco_loja_disco->buscarPorId($_GET["idD"], $_GET["idL"]);
 
 ?>
@@ -30,7 +29,7 @@ $loja_disco = $banco_loja_disco->buscarPorId($_GET["idD"], $_GET["idL"]);
 				Quantidade: <input name="qtd" type="number" required value="<?php echo $loja_disco->getQtd() ;?>"> <br>
 				<button type="submit">Salvar</button>
 			</form>
-			<form method="post" action="verLojas.php">
+			<form method="post" action="verLojas.php?id=<php? echo $loja_disco->getIdDisco(); ?>" >
 				<button type="submit">Cancelar</button>
 			</form>
 			

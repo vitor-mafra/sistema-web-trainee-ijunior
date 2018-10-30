@@ -120,13 +120,12 @@
 			return $disco;
 		}
 
-		public function consultarLojas($id){
+/*		public function consultarLojas($id){
 			$situacao = TRUE;
 			try{
 				$d = $this->conectar();
 				$query = "SELECT * FROM Loja_Disco
-					WHERE IdDisco = {$id}
-					AND QtdDisco >= 1";
+					WHERE IdDisco = {$id}"; //AND QtdDisco >= 1
 				$d->query($query);
 				$d->close();
 
@@ -137,6 +136,6 @@
 			return $situacao;
 		}
 
-
+*/
 	}
 ?>
