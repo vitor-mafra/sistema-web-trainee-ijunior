@@ -20,7 +20,7 @@ header {
 a{
     text-decoration: none;
     color: #ffff;
-    font-size: 20px;
+    font-size: 17px;
     background-color: #296b9b;
     padding: 5px;
 }
@@ -46,6 +46,6 @@ button{
     background-color:#55a6e8;
     border:none;
     padding:10px;
-    color:#ffff;
+    color:#fff;
     margin:10px;
 }
