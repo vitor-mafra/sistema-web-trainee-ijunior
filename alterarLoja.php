@@ -30,6 +30,7 @@ else{
         </header>
         <div class="formulario">	
 			<form method="post" action="LojaHelper.php?acao=alterar&id=<?php echo $loja->getIdLoja();?>">
+				Nome da loja: <input name="nome" type="text" required value="<?php echo $loja->getNome() ;?>"> <br> 
 				Responsável: <input name="dono" type="text" required value="<?php echo $loja->getDono() ;?>"> <br>
 				Endereço: <input name="rua" type="text" required value="<?php echo $loja->getRua(); ?>"> 
 				<input name="numero" type="text" required value="<?php echo $loja->getNumero(); ?>">

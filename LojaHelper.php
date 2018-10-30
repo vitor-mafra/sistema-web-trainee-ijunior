@@ -9,6 +9,7 @@
 			$loja = new Loja();
 			
 			$loja->setDono($_POST["dono"]);
+			$loja->setNome($_POST["nome"]);
 			$loja->setTelefone($_POST["telefone"]);
 			$loja->setRua($_POST["rua"]);
 			$loja->setNumero($_POST["numero"]);

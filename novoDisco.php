@@ -1,8 +1,10 @@
 <?php 
+
 require_once 'Disco.php'; 
 require_once 'DiscoDAO.php'; 	
 $banco_disco = new DiscoDAO();
 $discos = $banco_disco->listarDiscos();
+
 ?> 
 
 

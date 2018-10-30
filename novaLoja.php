@@ -25,6 +25,7 @@ $lojas = $banco_loja->listarLojas();
         </header>
         <div class="formulario">	
 			<form method="post" action="LojaHelper.php?acao=novo">
+				Nome da loja: <input name="nome" type="text" required > <br> 
 				Responsável: <input name="dono" type="text" required ><br>
 				Endereço: <input name="rua" type="text" required placeholder="Rua"> 
 				<input name="numero" type="text" required placeholder="Número">

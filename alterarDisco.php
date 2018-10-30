@@ -16,7 +16,7 @@ else{
     <meta charset="UTF-8">
     <head>
             <title>Discos</title>
-            <link rel="stylesheet" href="Menu.css" type "text/css">
+            <link rel="stylesheet" href="Menu.css" type="text/css">
     </head>
     <body>
         <header>

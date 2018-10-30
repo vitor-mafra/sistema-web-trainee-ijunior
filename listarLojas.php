@@ -33,6 +33,7 @@ $lojas = $banco_loja->listarLojas();
 		<table border=1>			
 			<thead>			
 			<tr>
+				<th> Nome da loja </th>
 				<th> Responsável </th>
 				<th> Endereço </th>
 				<th> Telefone </th>
@@ -46,6 +47,7 @@ $lojas = $banco_loja->listarLojas();
 				foreach($lojas as $loja){				
 			?>					
 				<tr>
+					<td><?php echo $loja->getNome() ?></td>
 					<td><?php echo $loja->getDono() ?></td>
 					<td><?php echo $loja->getRua(), ", ", $loja->getNumero(), ", ", $loja->getBairro(), ", ", $loja->getCEP(), ", ", $loja->getCidade() ?></td>
 					

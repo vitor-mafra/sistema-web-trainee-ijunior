@@ -18,8 +18,8 @@
 			try{
 				$d = $this->conectar();
 					
-				$query = "INSERT INTO Loja(Dono, Telefone, EnderecoRua, EnderecoNumero, EnderecoBairro, EnderecoCEP, EnderecoCidade)
-					 VALUES ('".$_POST["dono"]."','".$_POST["telefone"]."',	'".$_POST["rua"]."', '".$_POST["numero"]."', '".$_POST["bairro"]."', '".$_POST["cep"]."', '".$_POST["cidade"]."') ";
+				$query = "INSERT INTO Loja(Dono, Telefone, EnderecoRua, EnderecoNumero, EnderecoBairro, EnderecoCEP, EnderecoCidade, Nome)
+					 VALUES ('".$_POST["dono"]."','".$_POST["telefone"]."',	'".$_POST["rua"]."', '".$_POST["numero"]."', '".$_POST["bairro"]."', '".$_POST["cep"]."', '".$_POST["cidade"]."', '".$_POST["nome"]."') ";
 
 				$d->query($query);
 				$codigo = $d->insert_id;
@@ -61,7 +61,7 @@
 					SET Dono = '".$_POST["dono"]."', Telefone = '".$_POST["telefone"]."',
 					EnderecoRua = '".$_POST["rua"]."', EnderecoNumero = '".$_POST["numero"]."',
 					EnderecoBairro = '".$_POST["bairro"]."', EnderecoCEP = '".$_POST["cep"]."',
-					EnderecoCidade = '".$_POST["cidade"]."'
+					EnderecoCidade = '".$_POST["cidade"]."', Nome = '".$_POST["nome"]."'
 					WHERE IdLoja = $id";
 				$d->query($query);
 				$d->close();
@@ -86,6 +86,7 @@
 				while($registro = mysqli_fetch_assoc($resultado)){
 					$loja = new Loja();
 					$loja->setIdLoja($registro['IdLoja']);
+					$loja->setNome($registro['Nome']);
 					$loja->setDono($registro['Dono']);
 					$loja->setTelefone($registro['Telefone']);
 					$loja->setRua($registro['EnderecoRua']);
@@ -112,7 +113,8 @@
 				$resultado = $d->query($query);
 				$d->close();
 				$registro = mysqli_fetch_assoc($resultado);
-				$loja->setIdLoja($registro['IdLoja']);
+				$loja->setIdLoja($registro['IdLoja']);	
+				$loja->setNome($registro['Nome']);
 				$loja->setDono($registro['Dono']);
 				$loja->setTelefone($registro['Telefone']);
 				$loja->setRua($registro['EnderecoRua']);

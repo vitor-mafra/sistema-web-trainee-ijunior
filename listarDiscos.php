@@ -49,7 +49,7 @@ $discos = $banco_disco->listarDiscos();
 					<td><?php echo $disco->getArtista() ?></td>
 					<td><?php echo $disco->getAnoLancado() ?></td>
 					<td><?php echo $disco->getGenero() ?></td>
-					<td><a href="DiscoHelper.php?acao=verlojas&id=<?php echo $disco->getIdDisco();?>" class="tablebutton">Ver lojas</a></td>
+					<td><a href="verLojas.php?id=<?php echo $disco->getIdDisco();?>" class="tablebutton">Ver lojas</a></td>
 					<td><a href="alterarDisco.php?id=<?php echo $disco->getIdDisco();?>" class="tablebutton">Editar</a></td>
 					<td><a href="excluirDisco.php?id=<?php echo $disco->getIdDisco();?>" class="tablebutton">Excluir</a></td>
 				</tr>

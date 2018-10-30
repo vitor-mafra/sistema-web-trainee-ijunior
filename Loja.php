@@ -1,6 +1,7 @@
 <?php
 	class Loja {
 		private $dono;
+		private $nome;
 		private $telefone;	
 		private $id;
 		private $rua;
@@ -17,6 +18,14 @@
 			$this->id = $id;
 		}
 
+		function setNome($nome){
+			$this->nome = $nome;
+		}
+
+		function getNome(){	
+			return $this->nome;
+		}
+
 		function setDono($dono){
 			$this->dono = $dono;
 		}
@@ -24,6 +33,7 @@
 		function getDono(){	
 			return $this->dono;
 		}
+
 
 		function setTelefone($telefone){
 			$this->telefone = $telefone;

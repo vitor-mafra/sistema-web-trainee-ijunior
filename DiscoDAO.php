@@ -60,25 +60,9 @@
 			try{
 				$d = $this->conectar();
 				$query = "UPDATE Disco
-					SET Artista = '".$_POST["artista"]."', AnoLancado = '".$_POST["anolancado"]."', Genero = '".$_POST["genero"]."', Nome = '".$_POST["nomedisco"]."'
+					SET Artista = '".$_POST["artista"]."', AnoLancado = '".$_POST["anolancado"]."', 
+					Genero = '".$_POST["genero"]."', Nome = '".$_POST["nomedisco"]."'
 					WHERE IdDisco = $id";
-				$d->query($query);
-				$d->close();
-				
-			}catch(Exception $ex){
-				$situacao = FALSE;
-				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
-			}
-			return $situacao;
-		}
-
-		public function consultarLojas($id){
-			$situacao = TRUE;
-			try{
-				$d = $this->conectar();
-				$query = "SELECT IdLoja FROM Loja_Disco
-					WHERE IdDisco = $id
-					AND QtdDisco >= 1";
 				$d->query($query);
 				$d->close();
 				
@@ -134,6 +118,23 @@
 			}
 
 			return $disco;
+		}
+
+		public function consultarLojas($id){
+			$situacao = TRUE;
+			try{
+				$d = $this->conectar();
+				$query = "SELECT * FROM Loja_Disco
+					WHERE IdDisco = {$id}
+					AND QtdDisco >= 1";
+				$d->query($query);
+				$d->close();
+
+			}catch(Exception $ex){
+				$situacao = FALSE;
+				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
+			}
+			return $situacao;
 		}
 
 
