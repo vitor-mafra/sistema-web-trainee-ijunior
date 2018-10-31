@@ -57,12 +57,13 @@ $loja = new Loja();
 			<?php 
 				foreach($loja_disco as $relacao){
 					$idLoja = $relacao->getIdLoja();
-					$loja = $banco_loja->buscarPorId($idLoja);				
+					$loja = $banco_loja->buscarPorId($idLoja);	
+					$aux = 2;			
 			?>					
 				<tr>
 					<td><?php echo $loja->getNome() ?></td>
 					<td><?php echo $relacao->getQtd() ?></td>
-					<td><a href="alterarQtd.php?idD=<?php echo $relacao->getIdDisco();?>&idL=<?php echo $relacao->getIdLoja();?>" class="tablebutton">Editar</a></td>
+					<td><a href="alterarQtdLoja.php?idD=<?php echo $relacao->getIdDisco();?>&idL=<?php echo $relacao->getIdLoja();?>" class="tablebutton">Editar</a></td>
 				</tr>
 			<?php   }  ?>
 

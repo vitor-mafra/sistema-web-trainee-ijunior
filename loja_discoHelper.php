@@ -6,7 +6,7 @@
 
 	switch($acao){
 
-		case 'alterar':
+		case 'alterarL':
 			$banco_loja_disco = new Loja_DiscoDAO();
 			$idDisco = $_GET["idD"];
 			$idLoja = $_GET["idL"];
@@ -15,10 +15,22 @@
 			} else {
 				echo "<script> alert(\"Erro ao alterar quantidade!\"); </script>";
 			}
-			echo "<script>location.href='listarDiscos.php'</script>";	//alterar link para verLojas.php com o id do disco	
+				echo "<script>location.href='verLojas.php?id=$idDisco'</script>";
 
 		break;
 	
+		case 'alterarD':
+			$banco_loja_disco = new Loja_DiscoDAO();
+			$idDisco = $_GET["idD"];
+			$idLoja = $_GET["idL"];
+			if($banco_loja_disco->alterar($idDisco, $idLoja)){
+				echo" <script> alert (\"Quantidade alterada com sucesso!\"); </script>";
+			} else {
+				echo "<script> alert(\"Erro ao alterar quantidade!\"); </script>";
+			}
+			echo "<script>location.href='verDiscos.php?id=$idLoja'</script>";
+	
+		break;			
 
 		case 'consultarLojas':
 			$banco_disco = new DiscoDAO();		
