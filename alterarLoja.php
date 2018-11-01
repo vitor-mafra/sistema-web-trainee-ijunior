@@ -15,7 +15,7 @@ else{
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Lojas</title>
+            <title>Editar Loja - Pearl Records© 2018</title>
             <link rel="stylesheet" href="Menu.css" type="text/css">
     </head>
     <body>
@@ -52,7 +52,7 @@ else{
 
 
         <footer>
-            <h4>Pearl Records 2018</h4>
+            <h4>Pearl Records© 2018</h4>
         </footer>
     </body>
 </html>

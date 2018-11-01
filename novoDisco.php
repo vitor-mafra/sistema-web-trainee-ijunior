@@ -12,7 +12,7 @@ $discos = $banco_disco->listarDiscos();
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Discos</title>
+            <title>Cadastrar Disco - Pearl Records© 2018</title>
             <link rel="stylesheet" href="Menu.css" type "text/css">
     </head>
     <body>
@@ -41,7 +41,7 @@ $discos = $banco_disco->listarDiscos();
 
 
         <footer>
-            <h4>Pearl Records 2018</h4>
+            <h4>Pearl Records© 2018</h4>
         </footer>
     </body>
 </html>

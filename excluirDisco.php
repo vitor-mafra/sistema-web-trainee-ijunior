@@ -12,7 +12,7 @@ if(isset($_GET["id"])){
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Discos</title>
+            <title>Excluir Disco - Pearl Records© 2018</title>
             <link rel="stylesheet" href="Menu.css" type "text/css">
     </head>
     <body>
@@ -43,7 +43,7 @@ if(isset($_GET["id"])){
 
 
         <footer>
-            <h4>Pearl Records 2018</h4>
+            <h4>Pearl Records© 2018</h4>
         </footer>
     </body>
 </html>

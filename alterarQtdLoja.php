@@ -12,7 +12,7 @@ $aux = $_GET["aux"];
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Discos</title>
+            <title>Alterar quantidade - Pearl Records© 2018</title>
             <link rel="stylesheet" href="Menu.css" type="text/css">
     </head>
     <body>
@@ -38,7 +38,7 @@ $aux = $_GET["aux"];
 
 
         <footer>
-            <h4>Pearl Records 2018</h4>
+            <h4>Pearl Records© 2018</h4>
         </footer>
     </body>
 </html>
