@@ -71,7 +71,7 @@ $disco = new Disco();
 
 	</div>
 
-	<a href="listarLojas.php class="voltarbutton">Voltar</a>        
+	<a href="listarLojas.php" class="voltarbutton">Voltar</a>        
 
 
 

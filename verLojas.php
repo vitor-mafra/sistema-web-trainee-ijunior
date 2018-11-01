@@ -72,7 +72,7 @@ $loja = new Loja();
 
 	</div>
 
-    <a href="listarDiscos.php class="voltarbutton">Voltar</a>
+    <a href="listarDiscos.php" class="voltarbutton">Voltar</a>
 
 
 
