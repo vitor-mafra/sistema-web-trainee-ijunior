@@ -120,22 +120,6 @@
 			return $disco;
 		}
 
-/*		public function consultarLojas($id){
-			$situacao = TRUE;
-			try{
-				$d = $this->conectar();
-				$query = "SELECT * FROM Loja_Disco
-					WHERE IdDisco = {$id}"; //AND QtdDisco >= 1
-				$d->query($query);
-				$d->close();
 
-			}catch(Exception $ex){
-				$situacao = FALSE;
-				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
-			}
-			return $situacao;
-		}
-
-*/
 	}
 ?>
