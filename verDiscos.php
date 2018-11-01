@@ -25,7 +25,7 @@ $disco = new Disco();
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Ver Discos - Pearl Records© 2018</title>
+            <title>Lojas</title>
             <link rel="stylesheet" href="Menu.css" type="text/css">
     </head>
     <body>
@@ -71,7 +71,7 @@ $disco = new Disco();
 
 	</div>
 
-        
+	<a href="listarLojas.php class="voltarbutton">Voltar</a>        
 
 
 
@@ -81,7 +81,7 @@ $disco = new Disco();
 
 
 	<footer>
-            <h4>Pearl Records© 2018</h4>
+            <h4>Pearl Records 2018</h4>
         </footer>
     </body>
 </html>

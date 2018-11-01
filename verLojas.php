@@ -25,7 +25,7 @@ $loja = new Loja();
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Ver Lojas - Pearl Records© 2018</title>
+            <title>Discos</title>
             <link rel="stylesheet" href="Menu.css" type="text/css">
     </head>
     <body>
@@ -72,7 +72,7 @@ $loja = new Loja();
 
 	</div>
 
-        
+    <a href="listarDiscos.php class="voltarbutton">Voltar</a>
 
 
 
@@ -82,7 +82,7 @@ $loja = new Loja();
 
 
 	<footer>
-            <h4>Pearl Records© 2018</h4>
+            <h4>Pearl Records 2018</h4>
         </footer>
     </body>
 </html>
