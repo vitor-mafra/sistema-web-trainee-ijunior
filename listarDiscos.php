@@ -10,7 +10,7 @@ $discos = $banco_disco->listarDiscos();
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Discos - Pearl Records© 2018</title>
+            <title>Discos</title>
             <link rel="stylesheet" href="Menu.css" type "text/css">
     </head>
     <body>
@@ -35,9 +35,6 @@ $discos = $banco_disco->listarDiscos();
 				<th> Artista </th>
 				<th> Ano Lançado </th>
 				<th> Gênero </th>
-				<th>  <th>
-				<th>  <th>
-				<th>  <th>
 			</tr>
 			</thead>
 			<tbody>
@@ -49,7 +46,7 @@ $discos = $banco_disco->listarDiscos();
 					<td><?php echo $disco->getArtista() ?></td>
 					<td><?php echo $disco->getAnoLancado() ?></td>
 					<td><?php echo $disco->getGenero() ?></td>
-					<td><a href="verLojas.php?id=<?php echo $disco->getIdDisco();?>" class="tablebutton">Ver lojas</a></td>
+					<td><a href="verLojas.php?id=<?php echo $disco->getIdDisco();?>" class="tablebutton"> Ver lojas </a></td>
 					<td><a href="alterarDisco.php?id=<?php echo $disco->getIdDisco();?>" class="tablebutton">Editar</a></td>
 					<td><a href="excluirDisco.php?id=<?php echo $disco->getIdDisco();?>" class="tablebutton">Excluir</a></td>
 				</tr>
@@ -61,7 +58,7 @@ $discos = $banco_disco->listarDiscos();
 
 
         <footer>
-            <h4>Pearl Records© 2018</h4>
+            <h4>Pearl Records 2018</h4>
         </footer>
     </body>
 </html>

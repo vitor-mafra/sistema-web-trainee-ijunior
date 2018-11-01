@@ -50,7 +50,6 @@ $loja = new Loja();
 		
 				<th> Loja </th>
 				<th> Quantidade </th>
-				<th>  <th>
 			</tr>
 			</thead>
 			<tbody>

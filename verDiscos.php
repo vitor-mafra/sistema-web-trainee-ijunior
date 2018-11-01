@@ -50,7 +50,6 @@ $disco = new Disco();
 		
 				<th> Disco </th>
 				<th> Quantidade </th>
-				<th>  <th>
 			</tr>
 			</thead>
 			<tbody>
