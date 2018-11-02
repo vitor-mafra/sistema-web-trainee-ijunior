@@ -17,6 +17,7 @@ require_once 'LojaDAO.php';
 
 $banco_loja = new LojaDAO();
 $loja = new Loja();
+$lojas = $banco_loja->listarLojas();
 
 ?>
 
@@ -69,6 +70,22 @@ $loja = new Loja();
 			</tbody>
 		</table>
 
+	</div>
+	
+	<div class="formulario">	
+			<form method="post" action="loja_discoHelper.php?acao=adicionarL&idD=<?php echo $disco->getIdDisco(); ?>">
+				Adicione esse disco à outras lojas: <select name="idL">
+		  			<option disabled value="padrao">Escolher loja</option>
+					<?php	
+				   foreach($lojas as $loja) {
+					?>
+		           <option value="<?php echo $loja->getIdLoja()?>"> <?php echo $loja->getNome() ?> </option>
+		             
+					<?php } ?>
+
+  		 		</select>
+				<button type="submit">Salvar</button>
+			</form>
 	</div>
 
     <a href="listarDiscos.php" class="voltarbutton">Voltar</a>

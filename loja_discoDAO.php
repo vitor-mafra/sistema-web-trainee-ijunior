@@ -29,13 +29,31 @@
 			return $situacao;
 		}
 
+
+		public function adicionar($idDisco, $idLoja){
+			$situacao = TRUE;
+			try{
+				$d = $this->conectar();
+				$query = "INSERT INTO Loja_Disco(IdLoja, IdDisco, QtdDisco) 
+							VALUES ($idLoja, $idDisco, 0)";
+				$d->query($query);
+				$d->close();
+				
+			}catch(Exception $ex){
+				$situacao = FALSE;
+				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
+			}
+			return $situacao;
+		}
+
+
 		public function consultarLojasDoDisco($id){
 			$situacao = TRUE;
 			$lojas_disco = array();
 			try{
 				$d = $this->conectar();
 				$query = "SELECT * FROM Loja_Disco
-					WHERE IdDisco = {$id}"; //and qtd>0??
+					WHERE IdDisco = {$id}"; 
 				$resultado = $d->query($query);
 				$d->close();
 

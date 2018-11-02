@@ -4,7 +4,6 @@ require_once 'loja_discoDAO.php';
 
 $banco_loja_disco = new Loja_DiscoDAO();
 $loja_disco = $banco_loja_disco->consultarDiscosDaLoja($_GET["id"]);
-
 require_once 'Loja.php';
 require_once 'LojaDAO.php';
 
@@ -17,7 +16,7 @@ require_once 'DiscoDAO.php';
 
 $banco_disco = new DiscoDAO();
 $disco = new Disco();
-
+$discos = $banco_disco->listarDiscos();
 ?>
 
 
@@ -62,6 +61,7 @@ $disco = new Disco();
 					<td><?php echo $disco->getNomeDisco() ?></td>
 					<td><?php echo $relacao->getQtd() ?></td>
 					<td><a href="alterarQtdDisco.php?idD=<?php echo $relacao->getIdDisco();?>&idL=<?php echo $relacao->getIdLoja();?>" class="tablebutton">Editar</a></td>
+					
 				</tr>
 			<?php   }  ?>
 
@@ -70,10 +70,25 @@ $disco = new Disco();
 
 	</div>
 
+		<div class="formulario">	
+			<form method="post" action="loja_discoHelper.php?acao=adicionarD&idL=<?php echo $loja->getIdLoja(); ?>">
+				Adicione um novo disco a essa loja: <select name="idD">
+		  			<option disabled value="padrao">Escolher disco</option>
+		  			
+					<?php	
+				   foreach($discos as $disco) {
+					?>
+
+		             <option value="<?php echo $disco->getIdDisco() ?>"> <?php echo $disco->getNomeDisco() ?> </option>
+		             
+					<?php } ?>
+
+  		 		</select>
+				<button type="submit">Salvar</button>
+			</form>
+		</div>
 	<a href="listarLojas.php" class="voltarbutton">Voltar</a>        
-
-
-
+	
 
 
 

@@ -48,6 +48,8 @@
 			echo "<script>location.href='listarDiscos.php'; </script>";		
 
 		break;
+
+		
 	
 	}
 

@@ -39,9 +39,10 @@
 			$situacao = TRUE;
 			try{
 				$d = $this->conectar();
-					
-				$query = "DELETE FROM Disco
-   					WHERE  IdDisco = {$id}";
+				$query = "DELETE t1, t2 FROM 
+       					Disco as t1 
+        				INNER JOIN  Loja_Disco as t2 on t1.IdDisco = t2.IdDisco
+        				WHERE  t1.IdDisco = {$id}";
 				$d->query($query);
 				$d->close();
 
@@ -98,8 +99,7 @@
 			}
 			return $discos;
 		}
-
-
+							 
 		function buscarPorId($codigo){
 			$disco = new Disco();
 			try{
