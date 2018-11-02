@@ -39,11 +39,15 @@
 			$situacao = TRUE;
 			try{
 				$d = $this->conectar();
-				$query = "DELETE t1, t2 FROM 
-       					Disco as t1 
-        				INNER JOIN  Loja_Disco as t2 on t1.IdDisco = t2.IdDisco
-        				WHERE  t1.IdDisco = {$id}";
+				
+				$query = "DELETE FROM Loja_Disco
+						WHERE  IdDisco = $id";
 				$d->query($query);
+				
+				$query = "DELETE FROM Disco
+						WHERE IdDisco = $id";
+				$d->query($query);				
+
 				$d->close();
 
 				

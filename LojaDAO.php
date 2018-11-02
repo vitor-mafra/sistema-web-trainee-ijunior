@@ -38,10 +38,15 @@
 			$situacao = TRUE;
 			try{
 				$d = $this->conectar();
-					
-				$query = "DELETE FROM Loja 
-   					WHERE  IdLoja = {$id}";
+	
+				$query = "DELETE FROM Loja_Disco
+						WHERE  IdLoja = $id";
 				$d->query($query);
+				
+				$query = "DELETE FROM Loja
+						WHERE IdLoja = $id";
+				$d->query($query);				
+
 				$d->close();
 				
 			}catch(Exception $ex){
@@ -128,6 +133,7 @@
 
 			return $loja;
 		}
+
 
 
 	}
