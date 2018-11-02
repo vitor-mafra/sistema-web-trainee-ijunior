@@ -53,11 +53,12 @@
 			$idLoja = $_GET["idL"];
 
 			if($banco_disco->adicionar($idDisco, $idLoja)){
-				echo" <script> alert (\"Disco adicionado com sucesso!\"); </script>";
+				echo "<script>location.href='verDiscos.php?id=$idLoja'; </script>";		
 			} else {
 				echo "<script> alert(\"Erro ao adicionar disco!\"); </script>";
+				echo "<script>location.href='verDiscos.php?id=$idLoja'; </script>";				
 			}
-			echo "<script>location.href='verDiscos.php?id=$idLoja'; </script>";		
+			
 
 		break;
 		
@@ -67,14 +68,41 @@
 			$idDisco= $_GET["idD"];
 
 			if($banco_loja->adicionar($idDisco, $idLoja)){
-				echo" <script> alert (\"Loja adicionada com sucesso!\"); </script>";
+				echo "<script>location.href='verLojas.php?id=$idDisco'; </script>";		
 			} else {
 				echo "<script> alert(\"Erro ao adicionar loja!\"); </script>";
+				echo "<script>location.href='verLojas.php?id=$idDisco'; </script>";		
+			}
+
+		break;
+
+		case 'excluirD':
+			$banco_disco = new Loja_DiscoDAO();		
+			$idDisco = $_GET["idD"];
+			$idLoja = $_GET["idL"];
+
+			if($banco_disco->excluir($idDisco, $idLoja)){
+				echo" <script> alert (\"Disco excluido com sucesso!\"); </script>";
+			} else {
+				echo "<script> alert(\"Erro ao excluir disco!\"); </script>";
+			}
+			echo "<script>location.href='verDiscos.php?id=$idLoja'; </script>";		
+
+		break;
+		
+		case 'excluirL':
+			$banco_loja = new Loja_DiscoDAO();		
+			$idDisco = $_GET["idD"];
+			$idLoja = $_GET["idL"];
+
+			if($banco_loja->excluir($idDisco, $idLoja)){
+				echo" <script> alert (\"Disco excluido com sucesso!\"); </script>";
+			} else {
+				echo "<script> alert(\"Erro ao excluir disco!\"); </script>";
 			}
 			echo "<script>location.href='verLojas.php?id=$idDisco'; </script>";		
 
 		break;
-
 
 
 	}

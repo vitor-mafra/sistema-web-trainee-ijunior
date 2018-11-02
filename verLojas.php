@@ -64,6 +64,7 @@ $lojas = $banco_loja->listarLojas();
 					<td><?php echo $loja->getNome() ?></td>
 					<td><?php echo $relacao->getQtd() ?></td>
 					<td><a href="alterarQtdLoja.php?idD=<?php echo $relacao->getIdDisco();?>&idL=<?php echo $relacao->getIdLoja();?>" class="tablebutton">Editar</a></td>
+					<td><a href="loja_discoHelper.php?acao=excluirL&idL=<?php echo $relacao->getIdLoja(); ?>&idD=<?php echo $relacao->getIdDisco(); ?>" class="tablebutton">Remover disco dessa loja</a></td>
 				</tr>
 			<?php   }  ?>
 
