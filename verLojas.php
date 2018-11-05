@@ -17,6 +17,7 @@ require_once 'LojaDAO.php';
 
 $banco_loja = new LojaDAO();
 $loja = new Loja();
+$lojas = $banco_loja->listarLojas();
 
 ?>
 
@@ -25,7 +26,7 @@ $loja = new Loja();
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Ver Lojas - Pearl Records© 2018</title>
+            <title>Discos</title>
             <link rel="stylesheet" href="Menu.css" type="text/css">
     </head>
     <body>
@@ -50,7 +51,6 @@ $loja = new Loja();
 		
 				<th> Loja </th>
 				<th> Quantidade </th>
-				<th>  <th>
 			</tr>
 			</thead>
 			<tbody>
@@ -64,6 +64,7 @@ $loja = new Loja();
 					<td><?php echo $loja->getNome() ?></td>
 					<td><?php echo $relacao->getQtd() ?></td>
 					<td><a href="alterarQtdLoja.php?idD=<?php echo $relacao->getIdDisco();?>&idL=<?php echo $relacao->getIdLoja();?>" class="tablebutton">Editar</a></td>
+					<td><a href="loja_discoHelper.php?acao=excluirL&idL=<?php echo $relacao->getIdLoja(); ?>&idD=<?php echo $relacao->getIdDisco(); ?>" class="tablebutton">Remover disco dessa loja</a></td>
 				</tr>
 			<?php   }  ?>
 
@@ -71,8 +72,24 @@ $loja = new Loja();
 		</table>
 
 	</div>
+	
+	<div class="formulario">	
+			<form method="post" action="loja_discoHelper.php?acao=adicionarL&idD=<?php echo $disco->getIdDisco(); ?>">
+				Adicione esse disco à outras lojas: <select name="idL">
+		  			<option disabled value="padrao">Escolher loja</option>
+					<?php	
+				   foreach($lojas as $loja) {
+					?>
+		           <option value="<?php echo $loja->getIdLoja()?>"> <?php echo $loja->getNome() ?> </option>
+		             
+					<?php } ?>
 
-        
+  		 		</select>
+				<button type="submit">Salvar</button>
+			</form>
+	</div>
+
+    <a href="listarDiscos.php" class="voltarbutton">Voltar</a>
 
 
 
@@ -82,7 +99,7 @@ $loja = new Loja();
 
 
 	<footer>
-            <h4>Pearl Records© 2018</h4>
+            <h4>Pearl Records 2018</h4>
         </footer>
     </body>
 </html>

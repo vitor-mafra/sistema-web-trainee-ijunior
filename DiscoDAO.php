@@ -39,10 +39,15 @@
 			$situacao = TRUE;
 			try{
 				$d = $this->conectar();
-					
-				$query = "DELETE FROM Disco
-   					WHERE  IdDisco = {$id}";
+				
+				$query = "DELETE FROM Loja_Disco
+						WHERE  IdDisco = $id";
 				$d->query($query);
+				
+				$query = "DELETE FROM Disco
+						WHERE IdDisco = $id";
+				$d->query($query);				
+
 				$d->close();
 
 				
@@ -98,8 +103,7 @@
 			}
 			return $discos;
 		}
-
-
+							 
 		function buscarPorId($codigo){
 			$disco = new Disco();
 			try{
@@ -120,22 +124,6 @@
 			return $disco;
 		}
 
-/*		public function consultarLojas($id){
-			$situacao = TRUE;
-			try{
-				$d = $this->conectar();
-				$query = "SELECT * FROM Loja_Disco
-					WHERE IdDisco = {$id}"; //AND QtdDisco >= 1
-				$d->query($query);
-				$d->close();
 
-			}catch(Exception $ex){
-				$situacao = FALSE;
-				echo $ex->getFile().' : '.$ex->getLine().' : '.$ex->getMessage();
-			}
-			return $situacao;
-		}
-
-*/
 	}
 ?>
