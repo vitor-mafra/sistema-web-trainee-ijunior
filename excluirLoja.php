@@ -12,14 +12,14 @@ if(isset($_GET["id"])){
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Excluir Loja - Pearl Records© 2018</title>
-            <link rel="stylesheet" href="Menu.css" type "text/css">
+            <title>Lojas</title>
+            <link rel="stylesheet" type="text/css" href="Menu.css">
     </head>
     <body>
         <header>
             <nav class="menu">
                 <ul>
-                    <li><a href = "index.php">Home</a></li>
+                    <li><a href = "index.php">Página Inicial</a></li>
                     <li><a href = "listarLojas.php">Lojas</a></li>
                     <li><a href = "listarDiscos.php">Discos</a></li>
                 </ul>
@@ -43,7 +43,7 @@ if(isset($_GET["id"])){
 
 
         <footer>
-            <h4>Pearl Records© 2018</h4>
+            <h4>Pearl Records 2018</h4>
         </footer>
     </body>
 </html>
