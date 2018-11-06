@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'uglier_thingsregular';
+    src: url('Fontes/uglierthings-webfont.woff2') format('woff2'),
+         url('Fontes/uglierthings-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #333231;
+    font-family: uglier_thingsregular, Helvetica, Arial, sans-serif;
+}
+
+header {
+    height: 80px;
+    background-color: #1F1F1F;
+    text-align: center;
+    width: 100%;
+    border-style: bold;
+    border-radius: 20px;
+}
+
+
+.menu ul li{
+    display:inline-block;
+    line-height: 74px;
+    margin: 0 10px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #D2D4D4;
+    font-size: 40px;
+    padding: 5px;
+    margin: 80px;
+}
+
+.menu ul li a:hover{
+    color: #fff;
+    font-size: 40px;
+}
+
+h1{
+    font-size: 97px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 393px;
+    color: #CC271E;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+h4{
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #686968;
+}
+.img{
+    text-align: center;
+    margin-left: 540px;
+    width: 430px;
+    height: auto;
+}
+th {
+    background-color: black;
+    color: white;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+tr:hover {
+    background-color: white;
+}
+.cadastro{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+.cadastro a{
+    background-color: dimgrey;
+    text-decoration: none;
+    font-family: verdana;
+    color: black;
+    margin: 0 auto;
+}
+.tabeladiscos {
+    margin-left:auto;
+    margin-right:auto;
+    margin: 0 auto;
+}
+.tabeladiscos td a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+input{
+    margin:20px 20px;
+	font-size: 18px;
+}
+.formulario action {
+    font-weight: bold;
+}
+.formulario post{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+}
+.formulario button {
+        background-color: black; /* Green */
+        border: none;
+        color: white;
+        margin: 5px;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+}
+.voltarbutton{
+    font-weight: bold;
+    background-color: dimgrey;
+    text-decoration: none;
+    font-family: verdana;
+    color: black;
+    margin: 0 auto;
+    padding: 5px;
+}
