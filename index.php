@@ -9,7 +9,7 @@ Discos
     <meta charset="UTF-8">
     <head>
             <title>Pearl Records© 2018</title>
-            <link rel="stylesheet" href="Menu.css" type = "text/css">
+            <link rel="stylesheet" href="css/Menu.css" type="text/css">
     </head>
     <body>
         <header>
@@ -21,11 +21,13 @@ Discos
                 </ul>
             </nav>
         </header>
+        <h1>PEARL RECORDS</h1>
         <div>
-            <img class = "img" src="logoPR.png" alt = "Pearl Records.inc" height = 500px width = 600px>
+            <img class = "img" src="pearl_records_logo.png" alt = "Pearl Records.inc" height = 500px width = 600px>
         </div>
         <footer>
             <h4>Pearl Records© 2018</h4>
         </footer>
     </body>
 </html>
+
