@@ -10,14 +10,14 @@ $lojas = $banco_loja->listarLojas();
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Lojas</title>
+           <title>Lojas - Pearl Records© 2018</title>
            <link rel="stylesheet" type="text/css" href="Menu.css">
     </head>
     <body>
         <header>
             <nav class="menu">
                 <ul>
-                    <li><a href = "index.php">Página Inicial</a></li>
+                    <li><a href = "index.php">Home</a></li>
                     <li><a href = "listarLojas.php">Lojas</a></li>
                     <li><a href = "listarDiscos.php">Discos</a></li>
                 </ul>
@@ -61,7 +61,7 @@ $lojas = $banco_loja->listarLojas();
 
 
         <footer>
-            <h4>Pearl Records 2018</h4>
+            <h4>Pearl Records© 2018</h4>
         </footer>
     </body>
 </html>
