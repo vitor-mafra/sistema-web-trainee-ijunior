@@ -9,7 +9,7 @@ Discos
     <meta charset="UTF-8">
     <head>
             <title>Pearl Records© 2018</title>
-            <link rel="stylesheet" href="css/Menu.css" type="text/css">
+            <link rel="stylesheet" href="Menu.css" type="text/css">
     </head>
     <body>
         <header>
