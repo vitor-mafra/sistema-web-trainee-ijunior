@@ -11,14 +11,14 @@ $loja_disco = $banco_loja_disco->buscarPorId($_GET["idD"], $_GET["idL"]);
 <html>
     <meta charset="UTF-8">
     <head>
-            <title>Discos</title>
+	    <title>Alterar quantidade - Pearl Records© 2018</title>
             <link rel="stylesheet" type="text/css" href="Menu.css">
     </head>
     <body>
         <header>
             <nav class="menu">
                 <ul>
-                    <li><a href = "index.php">Página Inicial</a></li>
+                    <li><a href = "index.php">Home</a></li>
                     <li><a href = "listarLojas.php">Lojas</a></li>
                     <li><a href = "listarDiscos.php">Discos</a></li>
                 </ul>
