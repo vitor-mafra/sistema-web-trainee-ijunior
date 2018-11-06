@@ -1,15 +1,18 @@
+body{
+    background-color: #f0f0f0;
+    font-family: Helvetica, Arial, sans-serif;
+}
 header {
     height: 60px;
     background-color: #000000;
     text-align: center;
-
 }
 .menu ul li{
     display:inline-block;
     line-height: 60px;
     margin: 0 10px;
 }
-a{
+.menu ul li a{
     text-decoration: none;
     color: #ff0000;
     font-size: 40px;
@@ -18,7 +21,82 @@ a{
     margin: 80px;
 }
 h3{
+    font-size: 20px;
+    font-weight: bold;
     margin: auto;
     width: 50%;
     padding: 10px;
+}
+.img{
+    /*margin-left: 200px;
+    margin-right: auto;*/
+    display: block;
+    margin: 0 auto;
+}
+th {
+    background-color: black;
+    color: white;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+tr:hover {
+    background-color: white;
+}
+.cadastro{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+.cadastro a{
+    background-color: dimgrey;
+    text-decoration: none;
+    font-family: verdana;
+    color: black;
+    margin: 0 auto;
+}
+.tabeladiscos {
+    margin-left:auto;
+    margin-right:auto;
+    margin: 0 auto;
+}
+.tabeladiscos td a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+input{
+    margin:20px 20px;
+	font-size: 18px;
+}
+.formulario action {
+    font-weight: bold;
+}
+.formulario post{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+}
+.formulario button {
+        background-color: black; /* Green */
+        border: none;
+        color: white;
+        margin: 5px;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+}
+.voltarbutton{
+    font-weight: bold;
+    background-color: dimgrey;
+    text-decoration: none;
+    font-family: verdana;
+    color: black;
+    margin: 0 auto;
+    padding: 5px;
 }
