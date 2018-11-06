@@ -40,7 +40,7 @@ header {
 }
 
 h1{
-    font-size: 97px;
+    font-size: 80px;
     font-weight: bold;
     margin-top: 20px;
     margin-left: 393px;
@@ -60,11 +60,12 @@ h4{
     text-align: center;
     color: #686968;
 }
-.img{
-    text-align: center;
-    margin-left: 540px;
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 430px;
-    height: auto;
+    height: 300px;
 }
 th {
     background-color: black;
@@ -97,13 +98,13 @@ tr:hover {
 }
 .tabeladiscos td a{
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: black;
 }
 input{
     margin:20px 20px;
-	font-size: 18px;
+	font-size: 20px;
 }
 .formulario action {
     font-weight: bold;
