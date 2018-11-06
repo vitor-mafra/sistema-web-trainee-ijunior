@@ -44,7 +44,7 @@ $lojas = $banco_loja->listarLojas();
 		<h3> Nome do Disco: <?php echo $disco->getNomeDisco() ?> </h3>
 	</div>
 
-	<div>
+	<div class = "tabeladiscos">
 		<table border=1>			
 			<thead>			
 			<tr>
